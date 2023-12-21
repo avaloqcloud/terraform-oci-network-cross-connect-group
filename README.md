@@ -29,16 +29,14 @@ The code provides a reusable and standalone Terraform module that provisions a C
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.2.8 |
-| <a name="requirement_oci"></a> [oci](#requirement\_oci) | ~> 5.18.0 |
-| <a name="requirement_provider_1"></a> [provider\_1](#requirement\_provider\_1) | ~> 1.0 |
-| <a name="requirement_provider_2"></a> [provider\_2](#requirement\_provider\_2) | ~> 2.5 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.2.9 |
+| <a name="requirement_oci"></a> [oci](#requirement\_oci) | 5.18.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_oci"></a> [oci](#provider\_oci) | ~> 5.18.0 |
+| <a name="provider_oci"></a> [oci](#provider\_oci) | 5.18.0 |
 
 ## Modules
 
@@ -48,7 +46,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [oci_core_cross_connect_group.this](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_cross_connect_group) | resource |
+| [oci_core_cross_connect_group.this](https://registry.terraform.io/providers/oracle/oci/5.18.0/docs/resources/core_cross_connect_group) | resource |
 
 ## Inputs
 
@@ -58,5 +56,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_cross_connect"></a> [cross\_connect](#output\_cross\_connect) | Cross Connect Group output object |
 <!-- END_TF_DOCS -->

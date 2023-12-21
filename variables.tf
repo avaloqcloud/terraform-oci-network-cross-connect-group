@@ -24,11 +24,6 @@ variable "cross_connect_group" {
   })
   # Validation
   ## macsec_properties
-  ### macsec_properties (check that macsec_properties is not null; check if port_speed_shape_name is 1 Gbps; check that macsec_properties.state is not ENABLED)
-  validation {
-    condition     = var.cross_connect_group.macsec_properties != null ? (var.cross_connect_group.port_speed_shape_name == "1 Gbps" ? (var.cross_connect_group.macsec_properties[0].state != "ENABLED") : true) : true
-    error_message = "Validation of the Cross Connect object failed. The Cross Connect selected port speed for single cross-connects or cross-connect groups must be 10 Gbps or greater to enable MACSec."
-  }
   ### state
   validation {
     condition     = var.cross_connect_group.macsec_properties != null ? (var.cross_connect_group.macsec_properties[0].state != null ? (contains(["ENABLED", "DISABLED"], var.cross_connect_group.macsec_properties[0].state)) : true) : true
