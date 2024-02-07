@@ -31,8 +31,8 @@ variable "cross_connect_group" {
   }
   ### encryption_cipher
   validation {
-    condition     = var.cross_connect_group.macsec_properties != null ? (var.cross_connect_group.macsec_properties[0].encryption_cipher != null ? contains(["aes128-gcm-xpn", "aes256-gcm-xpn"], var.cross_connect_group.macsec_properties[0].encryption_cipher) : true) : true
-    error_message = "Validation of the Cross Connect object failed. 'macsec_properties.encryption_cipher' must be one of 'aes128-gcm-xpn', 'aes256-gcm-xpn'."
+    condition     = var.cross_connect_group.macsec_properties != null ? (var.cross_connect_group.macsec_properties[0].encryption_cipher != null ? contains(["AES128_GCM_XPN", "AES256_GCM_XPN"], var.cross_connect_group.macsec_properties[0].encryption_cipher) : true) : true
+    error_message = "Validation of the Cross Connect object failed. 'macsec_properties.encryption_cipher' must be one of 'AES128_GCM_XPN', 'AES256_GCM_XPN'."
   }
   ## is_unprotected_traffic_allowed
   validation {
